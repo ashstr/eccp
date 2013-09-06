@@ -1,0 +1,1 @@
+ckeditor\ckfinder\config.php

@@ -1,0 +1,169 @@
+/* Main Style */
+.switcher {
+	background: #FBFBFB;
+	width:59px;
+	position:fixed;
+	top:131px;
+	left:0px;
+	border-radius: 0 20px 6px 0;
+	-webkit-box-shadow: 0px 0px 4px 0px rgba(60,60,60,0.4);
+			box-shadow: 0px 0px 4px 0px rgba(60,60,60,0.4);
+	z-index:9999;
+}
+
+.switcher h2 {
+	padding: 0;
+	font-size: 15px;
+	padding: 20px 0 10px 10px;
+	line-height: 1;
+	margin: 0;
+}
+
+.switcher h2 a {
+	display: block;
+	height: 50px;
+	position: absolute;
+	right: -40px;
+	text-indent: -9999px;
+	top: 20px;
+	width: 41px;
+	border-radius: 0 25px 25px 0;
+	background:url(../images/icons/icon-colors.png) center center no-repeat #FBFBFB;
+	-webkit-box-shadow: 5px 0px 5px 0px rgba(60,60,60,0.4);
+			box-shadow: 5px 0px 5px 0px rgba(60,60,60,0.4);
+}
+
+.switcherContent {
+	padding:10px 0 6px 10px;
+	overflow:hidden;
+}
+
+
+
+/* Color Box */
+.switcherBox {
+	width:100%;
+	height:auto;
+	z-index:200;
+	overflow:hidden;
+	padding:0 .775%;
+}
+
+.swatch {
+	width: 40px;
+    height: 40px;
+	display: block;
+	cursor: pointer;
+	margin: 0 0 4px 0;
+	border-radius: 4px 10px;
+	float:left;
+}
+
+/*.styleswitch.selected { box-shadow: 0 0 0 2px #474646 inset; }*/
+
+.swatch#green  { background-color:#9abd42; }
+.swatch#teal   { background-color:#168e92; }
+.swatch#blue   { background-color:#29a0e4; }
+.swatch#orange { background-color:#eb8500; }
+.swatch#red    { background-color:#e33434; }
+.swatch#pink   { background-color:#ce2671; }
+
+
+
+/* Background Box */
+.bg {
+	height:auto;
+	overflow:hidden;
+	margin-bottom:6px;
+}
+
+
+
+/* Media Queries
+================================================== */
+
+/* Smaller than standard 1024px (devices and browsers) */
+@media only screen and (max-width: 1024px) {
+
+.switcher {
+	left:-1000px !important;
+}
+
+.swatch {
+	width:19.53%;
+	height:10px;
+	display:inline-block;
+	margin:0 2px 0 0;
+}
+	
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+.swatch {
+	width:19.54%;
+	height:10px;
+	display:inline-block;
+	margin:0 2px 0 0;
+}
+
+.switcher {
+	left:-1000px !important;
+}
+	
+
+}
+
+
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+.swatch {
+	width:19.59%;
+	height:10px;
+	display:inline-block;
+	margin:0 2px 0 0;
+}
+
+.switcher {
+	left:-1000px !important;
+}
+	
+	
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+.swatch {
+	width:19.4%;
+	height:10px;
+	display:inline-block;
+	margin:0 2px 0 0;
+}
+
+.switcher {
+	left:-1000px !important;
+}
+
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+.swatch {
+	width:19.2%;
+	height:10px;
+	display:inline-block;
+	margin:0 2px 0 0;
+}
+
+.switcher {
+	left:-1000px !important;
+}
+	
+
+}

@@ -1,0 +1,2019 @@
+.icon {
+    background: url("../images/icons/icons-grey.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    margin: -2px 4px 0 0;
+    vertical-align: middle;
+}
+.color {
+    background: url("../images/icons/icons-pink.png") no-repeat scroll 0 0 transparent;
+}
+.white {
+    background: url("../images/icons/icons-white.png") no-repeat scroll 0 0 transparent;
+}
+
+.icons li {
+	height:20px;
+	padding:5px 0;
+}
+#iconTabs ul.tabs-content {
+	border:none;
+	border-top:1px solid #ddd;
+	border-radius:0;
+	background:none;
+	margin:0 0 20px;
+	padding:20px 0 0;
+}
+#whiteIcons {
+	background-color:#9abd42;
+	overflow:auto;
+}
+.icon.glass {
+	background-position:-1px 0;
+	height:20px;
+	width:19px;
+}
+.icon.leaf {
+	background-position:-37px 0;
+	height:20px;
+	width:20px;
+}
+.icon.dog {
+	background-position:-73px 0;
+	height:20px;
+	width:21px;
+}
+.icon.user {
+	background-position:-110px 0;
+	height:19px;
+	width:19px;
+}
+.icon.girl {
+	background-position:-146px 0;
+	height:19px;
+	width:19px;
+}
+.icon.car {
+	background-position:-181px 0;
+	height:19px;
+	width:21px;
+}
+.icon.user-add {
+	background-position:-215px 0;
+	height:19px;
+	width:22px;
+}
+.icon.user-remove {
+	background-position:-252px 0;
+	height:19px;
+	width:22px;
+}
+.icon.film {
+	background-position:-290px 0;
+	height:21px;
+	width:19px;
+}
+.icon.magic {
+	background-position:-326px 0;
+	height:19px;
+	width:19px;
+}
+.icon.envelope {
+	background-position:-2px -38px;
+	height:13px;
+	width:18px;
+}
+.icon.camera {
+	background-position:-37px -37px;
+	height:17px;
+	width:19px;
+}
+.icon.heart {
+	background-position:-74px -37px;
+	height:17px;
+	width:18px;
+}
+.icon.beach-umbrella {
+	background-position:-110px -35px;
+	height:19px;
+	width:19px;
+}
+.icon.train {
+	background-position:-147px -34px;
+	height:22px;
+	width:16px;
+}
+.icon.print {
+	background-position:-182px -35px;
+	height:19px;
+	width:19px;
+}
+.icon.bin {
+	background-position:-219px -32px;
+	height:22px;
+	width:16px;
+}
+.icon.music {
+	background-position:-255px -36px;
+	height:19px;
+	width:16px;
+}
+.icon.note {
+	background-position:-293px -35px;
+	height:20px;
+	width:13px;
+}
+.icon.cogwheel {
+	background-position:-326px -36px;
+	height:19px;
+	width:19px;
+}
+.icon.home {
+	background-position:-1px -68px;
+	height:21px;
+	width:20px;
+}
+.icon.snowflake {
+	background-position:-37px -70px;
+	height:22px;
+	width:21px;
+}
+.icon.fire {
+	background-position:-75px -72px;
+	height:20px;
+	width:16px;
+}
+.icon.cogwheels {
+	background-position:-110px -71px;
+	height:20px;
+	width:20px;
+}
+.icon.parents {
+	background-position:-142px -73px;
+	height:18px;
+	width:25px;
+}
+.icon.binoculars {
+	background-position:-182px -72px;
+	height:20px;
+	width:18px;
+}
+.icon.road {
+	background-position:-216px -71px;
+	height:20px;
+	width:22px;
+}
+.icon.search-i {
+	background-position:-254px -73px;
+	height:19px;
+	width:19px;
+}
+.icon.cars {
+	background-position:-286px -69px;
+	height:20px;
+	width:27px;
+}
+.icon.notes-2 {
+	background-position:-327px -70px;
+	height:22px;
+	width:16px;
+}
+.icon.pencil {
+	background-position:-2px -108px;
+	height:19px;
+	width:19px;
+}
+.icon.bus {
+	background-position:-35px -108px;
+	height:20px;
+	width:25px;
+}
+.icon.wifi-alt {
+	background-position:-73px -103px;
+	height:20px;
+	width:20px;
+}
+.icon.luggage {
+	background-position:-111px -106px;
+	height:21px;
+	width:16px;
+}
+.icon.old-man {
+	background-position:-146px -107px;
+	height:20px;
+	width:18px;
+}
+.icon.woman {
+	background-position:-183px -109px;
+	height:19px;
+	width:17px;
+}
+.icon.file {
+	background-position:-220px -108px;
+	height:19px;
+	width:15px;
+}
+.icon.credit {
+	background-position:-253px -108px;
+	height:19px;
+	width:20px;
+}
+.icon.airplane {
+	background-position:-290px -108px;
+	height:20px;
+	width:18px;
+}
+.icon.notes {
+	background-position:-327px -108px;
+	height:20px;
+	width:16px;
+}
+.icon.stats {
+	background-position:-2px -143px;
+	height:20px;
+	width:20px;
+}
+.icon.charts {
+	background-position:-37px -145px;
+	height:19px;
+	width:20px;
+}
+.icon.pie-chart {
+	background-position:-74px -145px;
+	height:19px;
+	width:20px;
+}
+.icon.group {
+	background-position:-105px -146px;
+	height:18px;
+	width:27px;
+}
+.icon.keys {
+	background-position:-146px -143px;
+	height:21px;
+	width:19px;
+}
+.icon.calendar {
+	background-position:-182px -144px;
+	height:20px;
+	width:18px;
+}
+.icon.router {
+	background-position:-216px -144px;
+	height:20px;
+	width:21px;
+}
+.icon.camera-small {
+	background-position:-255px -145px;
+	height:19px;
+	width:17px;
+}
+.icon.dislikes {
+	background-position:-290px -144px;
+	height:19px;
+	width:19px;
+}
+.icon.star {
+	background-position:-326px -145px;
+	height:19px;
+	width:19px;
+}
+.icon.link {
+	background-position:-2px -181px;
+	height:18px;
+	width:17px;
+}
+.icon.eye-open {
+	background-position:-36px -183px;
+	height:14px;
+	width:23px;
+}
+.icon.eye-close {
+	background-position:-71px -179px;
+	height:20px;
+	width:23px;
+}
+.icon.alarm {
+	background-position:-109px -180px;
+	height:20px;
+	width:21px;
+}
+.icon.clock {
+	background-position:-146px -180px;
+	height:20px;
+	width:19px;
+}
+.icon.stopwatch {
+	background-position:-183px -177px;
+	height:22px;
+	width:17px;
+}
+.icon.projector {
+	background-position:-217px -177px;
+	height:20px;
+	width:21px;
+}
+.icon.history {
+	background-position:-254px -180px;
+	height:20px;
+	width:19px;
+}
+.icon.truck {
+	background-position:-287px -179px;
+	height:21px;
+	width:25px;
+}
+.icon.cargo {
+	background-position:-326px -179px;
+	height:21px;
+	width:19px;
+}
+.icon.compass {
+	background-position:-2px -216px;
+	height:19px;
+	width:19px;
+}
+.icon.keynote {
+	background-position:-39px -215px;
+	height:23px;
+	width:16px;
+}
+.icon.attach {
+	background-position:-73px -216px;
+	height:19px;
+	width:20px;
+}
+.icon.power {
+	background-position:-111px -216px;
+	height:19px;
+	width:17px;
+}
+.icon.lightbulb {
+	background-position:-148px -215px;
+	height:20px;
+	width:15px;
+}
+.icon.tag {
+	background-position:-182px -216px;
+	height:19px;
+	width:19px;
+}
+.icon.tags {
+	background-position:-215px -216px;
+	height:19px;
+	width:23px;
+}
+.icon.cleaning {
+	background-position:-255px -217px;
+	height:19px;
+	width:19px;
+}
+.icon.ruler {
+	background-position:-288px -220px;
+	height:12px;
+	width:21px;
+}
+.icon.gift {
+	background-position:-326px -216px;
+	height:20px;
+	width:19px;
+}
+.icon.umbrella {
+	background-position:-1px -251px;
+	height:22px;
+	width:20px;
+}
+.icon.book {
+	background-position:-39px -252px;
+	height:19px;
+	width:17px;
+}
+.icon.bookmark {
+	background-position:-74px -252px;
+	height:19px;
+	width:13px;
+}
+.icon.signal {
+	background-position:-108px -253px;
+	height:18px;
+	width:24px;
+}
+.icon.cup {
+	background-position:-147px -253px;
+	height:19px;
+	width:17px;
+}
+.icon.stroller {
+	background-position:-181px -252px;
+	height:20px;
+	width:20px;
+}
+.icon.headphones {
+	background-position:-218px -252px;
+	height:19px;
+	width:19px;
+}
+.icon.headset {
+	background-position:-254px -251px;
+	height:22px;
+	width:19px;
+}
+.icon.warning-sign {
+	background-position:-289px -252px;
+	height:19px;
+	width:22px;
+}
+.icon.signal-2 {
+	background-position:-326px -253px;
+	height:19px;
+	width:19px;
+}
+.icon.retweet {
+	background-position:0 -291px;
+	height:13px;
+	width:22px;
+}
+.icon.refresh {
+	background-position:-38px -288px;
+	height:20px;
+	width:19px;
+}
+.icon.roundabout {
+	background-position:-74px -287px;
+	height:21px;
+	width:20px;
+}
+.icon.random {
+	background-position:-109px -290px;
+	height:16px;
+	width:21px;
+}
+.icon.heat {
+	background-position:-146px -288px;
+	height:20px;
+	width:22px;
+}
+.icon.repeat {
+	background-position:-182px -288px;
+	height:20px;
+	width:18px;
+}
+.icon.display {
+	background-position:-216px -287px;
+	height:20px;
+	width:22px;
+}
+.icon.log-book {
+	background-position:-255px -288px;
+	height:20px;
+	width:17px;
+}
+.icon.address-book {
+	background-position:-291px -288px;
+	height:20px;
+	width:17px;
+}
+.icon.magnet {
+	background-position:-327px -288px;
+	height:19px;
+	width:17px;
+}
+.icon.table {
+	background-position:-2px -324px;
+	height:19px;
+	width:19px;
+}
+.icon.contrast {
+	background-position:-38px -324px;
+	height:20px;
+	width:19px;
+}
+.icon.tint {
+	background-position:-74px -323px;
+	height:20px;
+	width:18px;
+}
+.icon.crop {
+	background-position:-110px -324px;
+	height:20px;
+	width:20px;
+}
+.icon.vector-path-square {
+	background-position:-146px -324px;
+	height:19px;
+	width:19px;
+}
+.icon.vector-path-circle {
+	background-position:-182px -324px;
+	height:19px;
+	width:19px;
+}
+.icon.vector-path-polygon {
+	background-position:-217px -323px;
+	height:20px;
+	width:20px;
+}
+.icon.vector-path-line {
+	background-position:-254px -324px;
+	height:19px;
+	width:19px;
+}
+.icon.vector-path-curve {
+	background-position:-290px -324px;
+	height:19px;
+	width:19px;
+}
+.icon.vector-path-all {
+	background-position:-326px -324px;
+	height:19px;
+	width:19px;
+}
+.icon.font {
+	background-position:-2px -360px;
+	height:18px;
+	width:20px;
+}
+.icon.italic {
+	background-position:-40px -361px;
+	height:19px;
+	width:11px;
+}
+.icon.bold {
+	background-position:-75px -360px;
+	height:19px;
+	width:15px;
+}
+.icon.text-underline {
+	background-position:-111px -360px;
+	height:19px;
+	width:16px;
+}
+.icon.text-strike {
+	background-position:-147px -360px;
+	height:18px;
+	width:15px;
+}
+.icon.text-height {
+	background-position:-181px -359px;
+	height:19px;
+	width:20px;
+}
+.icon.text-width {
+	background-position:-219px -360px;
+	height:19px;
+	width:16px;
+}
+.icon.text-resize {
+	background-position:-253px -359px;
+	height:21px;
+	width:20px;
+}
+.icon.left-indent {
+	background-position:-290px -361px;
+	height:18px;
+	width:19px;
+}
+.icon.right-indent {
+	background-position:-326px -361px;
+	height:17px;
+	width:19px;
+}
+.icon.align-left-i {
+	background-position:-2px -398px;
+	height:17px;
+	width:18px;
+}
+.icon.align-center {
+	background-position:-37px -398px;
+	height:17px;
+	width:19px;
+}
+.icon.align-right-i {
+	background-position:-74px -398px;
+	height:17px;
+	width:18px;
+}
+.icon.justify {
+	background-position:-110px -398px;
+	height:17px;
+	width:18px;
+}
+.icon.list {
+	background-position:-146px -398px;
+	height:17px;
+	width:19px;
+}
+.icon.text-smaller {
+	background-position:-183px -399px;
+	height:14px;
+	width:18px;
+}
+.icon.text-bigger {
+	background-position:-217px -397px;
+	height:18px;
+	width:19px;
+}
+.icon.embed-i {
+	background-position:-252px -401px;
+	height:12px;
+	width:23px;
+}
+.icon.embed-close {
+	background-position:-288px -397px;
+	height:20px;
+	width:23px;
+}
+.icon.adjust {
+	background-position:-326px -395px;
+	height:20px;
+	width:18px;
+}
+.icon.message-full {
+	background-position:-2px -430px;
+	height:22px;
+	width:18px;
+}
+.icon.message-empty {
+	background-position:-37px -430px;
+	height:22px;
+	width:19px;
+}
+.icon.message-in {
+	background-position:-74px -430px;
+	height:22px;
+	width:19px;
+}
+.icon.message-out {
+	background-position:-110px -430px;
+	height:22px;
+	width:19px;
+}
+.icon.message-plus {
+	background-position:-146px -433px;
+	height:18px;
+	width:22px;
+}
+.icon.message-minus {
+	background-position:-182px -433px;
+	height:18px;
+	width:22px;
+}
+.icon.message-ban {
+	background-position:-218px -433px;
+	height:18px;
+	width:23px;
+}
+.icon.message-flag {
+	background-position:-254px -433px;
+	height:18px;
+	width:21px;
+}
+.icon.message-lock {
+	background-position:-290px -433px;
+	height:19px;
+	width:22px;
+}
+.icon.message-new {
+	background-position:-326px -434px;
+	height:17px;
+	width:22px;
+}
+.icon.inbox {
+	background-position:-2px -469px;
+	height:18px;
+	width:19px;
+}
+.icon.inbox-plus {
+	background-position:-37px -466px;
+	height:21px;
+	width:22px;
+}
+.icon.inbox-minus {
+	background-position:-74px -466px;
+	height:21px;
+	width:21px;
+}
+.icon.inbox-lock {
+	background-position:-110px -466px;
+	height:22px;
+	width:19px;
+}
+.icon.inbox-in {
+	background-position:-146px -467px;
+	height:21px;
+	width:19px;
+}
+.icon.inbox-out {
+	background-position:-182px -467px;
+	height:21px;
+	width:18px;
+}
+.icon.computer-locked {
+	background-position:-216px -469px;
+	height:19px;
+	width:22px;
+}
+.icon.computer-service {
+	background-position:-253px -469px;
+	height:19px;
+	width:21px;
+}
+.icon.computer-proces {
+	background-position:-288px -469px;
+	height:19px;
+	width:22px;
+}
+.icon.phone {
+	background-position:-329px -468px;
+	height:20px;
+	width:12px;
+}
+.icon.database-lock {
+	background-position:-2px -502px;
+	height:22px;
+	width:20px;
+}
+.icon.database-plus {
+	background-position:-38px -502px;
+	height:22px;
+	width:21px;
+}
+.icon.database-minus {
+	background-position:-74px -502px;
+	height:22px;
+	width:21px;
+}
+.icon.database-ban {
+	background-position:-110px -502px;
+	height:22px;
+	width:19px;
+}
+.icon.folder-open {
+	background-position:-146px -506px;
+	height:18px;
+	width:23px;
+}
+.icon.folder-plus {
+	background-position:-182px -504px;
+	height:20px;
+	width:22px;
+}
+.icon.folder-minus {
+	background-position:-218px -504px;
+	height:20px;
+	width:22px;
+}
+.icon.folder-lock {
+	background-position:-254px -503px;
+	height:21px;
+	width:22px;
+}
+.icon.folder-flag {
+	background-position:-290px -504px;
+	height:20px;
+	width:21px;
+}
+.icon.folder-new {
+	background-position:-326px -504px;
+	height:20px;
+	width:22px;
+}
+.icon.check {
+	background-position:-2px -544px;
+	height:15px;
+	width:17px;
+}
+.icon.edit {
+	background-position:-37px -543px;
+	height:17px;
+	width:19px;
+}
+.icon.new-window {
+	background-position:-74px -542px;
+	height:17px;
+	width:20px;
+}
+.icon.more-windows {
+	background-position:-110px -541px;
+	height:18px;
+	width:17px;
+}
+.icon.show-big-thumbnails {
+	background-position:-147px -541px;
+	height:18px;
+	width:17px;
+}
+.icon.show-thumbnails {
+	background-position:-183px -541px;
+	height:18px;
+	width:17px;
+}
+.icon.show-thumbnails-with-lines {
+	background-position:-218px -544px;
+	height:12px;
+	width:19px;
+}
+.icon.show-lines {
+	background-position:-254px -544px;
+	height:12px;
+	width:19px;
+}
+.icon.playlist {
+	background-position:-290px -541px;
+	height:19px;
+	width:22px;
+}
+.icon.picture {
+	background-position:-326px -542px;
+	height:16px;
+	width:19px;
+}
+.icon.imac {
+	background-position:-1px -578px;
+	height:18px;
+	width:20px;
+}
+.icon.macbook {
+	background-position:-36px -579px;
+	height:13px;
+	width:21px;
+}
+.icon.ipad {
+	background-position:-75px -575px;
+	height:22px;
+	width:16px;
+}
+.icon.iphone {
+	background-position:-114px -577px;
+	height:19px;
+	width:11px;
+}
+.icon.iphone-transfer {
+	background-position:-144px -577px;
+	height:19px;
+	width:23px;
+}
+.icon.iphone-exchange {
+	background-position:-180px -577px;
+	height:19px;
+	width:23px;
+}
+.icon.ipod {
+	background-position:-222px -578px;
+	height:17px;
+	width:11px;
+}
+.icon.ipod-shuffle {
+	background-position:-258px -581px;
+	height:11px;
+	width:12px;
+}
+.icon.ear-plugs {
+	background-position:-291px -576px;
+	height:19px;
+	width:16px;
+}
+.icon.albums {
+	background-position:-324px -579px;
+	height:15px;
+	width:21px;
+}
+.icon.step-backward {
+	background-position:-5px -615px;
+	height:14px;
+	width:11px;
+}
+.icon.fast-backward {
+	background-position:-37px -615px;
+	height:14px;
+	width:19px;
+}
+.icon.rewind {
+	background-position:-74px -615px;
+	height:14px;
+	width:18px;
+}
+.icon.play {
+	background-position:-114px -615px;
+	height:14px;
+	width:13px;
+}
+.icon.pause {
+	background-position:-151px -615px;
+	height:14px;
+	width:9px;
+}
+.icon.stop {
+	background-position:-185px -616px;
+	height:12px;
+	width:12px;
+}
+.icon.forward {
+	background-position:-219px -615px;
+	height:14px;
+	width:18px;
+}
+.icon.fast-forward {
+	background-position:-253px -615px;
+	height:14px;
+	width:20px;
+}
+.icon.step-forward {
+	background-position:-294px -614px;
+	height:14px;
+	width:12px;
+}
+.icon.eject {
+	background-position:-328px -614px;
+	height:14px;
+	width:14px;
+}
+.icon.facetime-video {
+	background-position:-2px -652px;
+	height:13px;
+	width:18px;
+}
+.icon.download-alt {
+	background-position:-38px -720px;
+	height:19px;
+	width:19px;
+}
+.icon.mute {
+	background-position:-74px -651px;
+	height:13px;
+	width:17px;
+}
+.icon.volume-down {
+	background-position:-110px -651px;
+	height:13px;
+	width:12px;
+}
+.icon.volume-up {
+	background-position:-146px -648px;
+	height:19px;
+	width:19px;
+}
+.icon.screenshot {
+	background-position:-181px -646px;
+	height:21px;
+	width:21px;
+}
+.icon.move {
+	background-position:-217px -648px;
+	height:19px;
+	width:19px;
+}
+.icon.more-2 {
+	background-position:-255px -655px;
+	height:7px;
+	width:17px;
+}
+.icon.brightness-reduce {
+	background-position:-291px -651px;
+	height:16px;
+	width:16px;
+}
+.icon.brightness-increase {
+	background-position:-326px -648px;
+	height:19px;
+	width:19px;
+}
+.icon.circle-remove {
+	background-position:-73px -684px;
+	height:20px;
+	width:20px;
+}
+.icon.circle-ok {
+	background-position:-110px -684px;
+	height:20px;
+	width:20px;
+}
+.icon.circle-question-mark {
+	background-position:-146px -684px;
+	height:20px;
+	width:19px;
+}
+.icon.circle-info {
+	background-position:-181px -684px;
+	height:20px;
+	width:20px;
+}
+.icon.circle-exclamation-mark {
+	background-position:-217px -684px;
+	height:20px;
+	width:20px;
+}
+.icon.remove {
+	background-position:-254px -684px;
+	height:20px;
+	width:19px;
+}
+.icon.ok {
+	background-position:-290px -684px;
+	height:20px;
+	width:20px;
+}
+.icon.ban {
+	background-position:-326px -684px;
+	height:20px;
+	width:20px;
+}
+.icon.shopping-cart {
+	background-position:-74px -720px;
+	height:19px;
+	width:20px;
+}
+.icon.lock {
+	background-position:-110px -719px;
+	height:21px;
+	width:17px;
+}
+.icon.unlock {
+	background-position:-147px -717px;
+	height:21px;
+	width:16px;
+}
+.icon.electricity {
+	background-position:-187px -718px;
+	height:20px;
+	width:9px;
+}
+.icon.ok-2 {
+	background-position:-217px -723px;
+	height:15px;
+	width:19px;
+}
+.icon.remove-2 {
+	background-position:-246px -696px;
+	height:14px;
+	width:14px;
+}
+.icon.cart-out {
+	background-position:-290px -721px;
+	height:20px;
+	width:20px;
+}
+.icon.cart-in {
+	background-position:-326px -719px;
+	height:20px;
+	width:20px;
+}
+.icon.left-arrow {
+	background-position:-3px -759px;
+	height:15px;
+	width:16px;
+}
+.icon.right-arrow {
+	background-position:-39px -758px;
+	height:15px;
+	width:16px;
+}
+.icon.down-arrow {
+	background-position:-76px -758px;
+	height:16px;
+	width:14px;
+}
+.icon.up-arrow {
+	background-position:-112px -758px;
+	height:16px;
+	width:14px;
+}
+.icon.resize-small {
+	background-position:-146px -757px;
+	height:19px;
+	width:19px;
+}
+.icon.resize-full {
+	background-position:-182px -756px;
+	height:19px;
+	width:19px;
+}
+.icon.circle-arrow-left {
+	background-position:-218px -756px;
+	height:20px;
+	width:20px;
+}
+.icon.circle-arrow-right {
+	background-position:-254px -756px;
+	height:20px;
+	width:19px;
+}
+.icon.circle-arrow-top {
+	background-position:-290px -756px;
+	height:20px;
+	width:20px;
+}
+.icon.circle-arrow-down {
+	background-position:-326px -756px;
+	height:20px;
+	width:20px;
+}
+.icon.play-button {
+	background-position:-2px -792px;
+	height:20px;
+	width:20px;
+}
+.icon.unshare {
+	background-position:-37px -794px;
+	height:15px;
+	width:18px;
+}
+.icon.share {
+	background-position:-74px -794px;
+	height:15px;
+	width:18px;
+}
+.icon.thin-right-arrow {
+	background-position:-113px -793px;
+	height:17px;
+	width:13px;
+}
+.icon.thin-arrow-left {
+	background-position:-150px -793px;
+	height:17px;
+	width:11px;
+}
+.icon.bluetooth {
+	background-position:-186px -791px;
+	height:19px;
+	width:11px;
+}
+.icon.euro {
+	background-position:-218px -793px;
+	height:18px;
+	width:17px;
+}
+.icon.usd {
+	background-position:-257px -791px;
+	height:21px;
+	width:13px;
+}
+.icon.bp {
+	background-position:-294px -793px;
+	height:19px;
+	width:14px;
+}
+.icon.retweet-2 {
+	background-position:-323px -793px;
+	height:17px;
+	width:24px;
+}
+.icon.moon {
+	background-position:-2px -828px;
+	height:20px;
+	width:17px;
+}
+.icon.sun {
+	background-position:-37px -828px;
+	height:20px;
+	width:19px;
+}
+.icon.cloud {
+	background-position:-73px -831px;
+	height:14px;
+	width:21px;
+}
+.icon.direction {
+	background-position:-110px -828px;
+	height:20px;
+	width:19px;
+}
+.icon.brush {
+	background-position:-146px -829px;
+	height:18px;
+	width:19px;
+}
+.icon.pen {
+	background-position:-183px -829px;
+	height:19px;
+	width:19px;
+}
+.icon.zoom-in {
+	background-position:-219px -828px;
+	height:20px;
+	width:19px;
+}
+.icon.zoom-out {
+	background-position:-255px -828px;
+	height:20px;
+	width:19px;
+}
+.icon.pin {
+	background-position:-295px -828px;
+	height:20px;
+	width:9px;
+}
+.icon.riflescope {
+	background-position:-325px -828px;
+	height:20px;
+	width:20px;
+}
+.icon.rotation-lock {
+	background-position:-2px -865px;
+	height:19px;
+	width:20px;
+}
+.icon.flash {
+	background-position:-41px -863px;
+	height:20px;
+	width:11px;
+}
+.icon.google-maps {
+	background-position:-78px -864px;
+	height:19px;
+	width:11px;
+}
+.icon.anchor {
+	background-position:-110px -865px;
+	height:19px;
+	width:19px;
+}
+.icon.conversation {
+	background-position:-146px -866px;
+	height:14px;
+	width:19px;
+}
+.icon.chat {
+	background-position:-182px -866px;
+	height:15px;
+	width:18px;
+}
+.icon.male {
+	background-position:-219px -865px;
+	height:18px;
+	width:17px;
+}
+.icon.female {
+	background-position:-257px -864px;
+	height:22px;
+	width:13px;
+}
+.icon.asterisk {
+	background-position:-292px -866px;
+	height:16px;
+	width:16px;
+}
+.icon.divide {
+	background-position:-328px -868px;
+	height:13px;
+	width:14px;
+}
+.icon.snorkel-diving {
+	background-position:-1px -900px;
+	height:20px;
+	width:21px;
+}
+.icon.scuba-diving {
+	background-position:-37px -900px;
+	height:19px;
+	width:20px;
+}
+.icon.oxygen-bottle {
+	background-position:-76px -899px;
+	height:22px;
+	width:17px;
+}
+.icon.fins {
+	background-position:-109px -898px;
+	height:22px;
+	width:23px;
+}
+.icon.fishes {
+	background-position:-145px -900px;
+	height:23px;
+	width:21px;
+}
+.icon.boat {
+	background-position:-182px -901px;
+	height:19px;
+	width:19px;
+}
+.icon.delete-point {
+	background-position:-217px -903px;
+	height:14px;
+	width:20px;
+}
+.icon.sheriffs-star {
+	background-position:-254px -900px;
+	height:21px;
+	width:19px;
+}
+.icon.qrcode {
+	background-position:-290px -900px;
+	height:19px;
+	width:19px;
+}
+.icon.barcode {
+	background-position:-326px -900px;
+	height:19px;
+	width:19px;
+}
+.icon.pool {
+	background-position:-2px -935px;
+	height:20px;
+	width:18px;
+}
+.icon.buoy {
+	background-position:-37px -935px;
+	height:20px;
+	width:19px;
+}
+.icon.spade {
+	background-position:-74px -937px;
+	height:19px;
+	width:19px;
+}
+.icon.bank {
+	background-position:-110px -935px;
+	height:20px;
+	width:18px;
+}
+.icon.vcard {
+	background-position:-147px -935px;
+	height:20px;
+	width:17px;
+}
+.icon.electrical-plug {
+	background-position:-184px -935px;
+	height:20px;
+	width:14px;
+}
+.icon.flag {
+	background-position:-219px -935px;
+	height:20px;
+	width:16px;
+}
+.icon.credit-card {
+	background-position:-252px -939px;
+	height:15px;
+	width:20px;
+}
+.icon.keyboard-wireless {
+	background-position:-290px -939px;
+	height:16px;
+	width:21px;
+}
+.icon.keyboard-wired {
+	background-position:-324px -936px;
+	height:20px;
+	width:21px;
+}
+.icon.shield {
+	background-position:-2px -1010px;
+	height:19px;
+	width:17px;
+}
+.icon.ring {
+	background-position:-39px -972px;
+	height:19px;
+	width:16px;
+}
+.icon.cake {
+	background-position:-74px -972px;
+	height:19px;
+	width:18px;
+}
+.icon.drink {
+	background-position:-110px -1044px;
+	height:19px;
+	width:19px;
+}
+.icon.beer {
+	background-position:-147px -1010px;
+	height:19px;
+	width:19px;
+}
+.icon.fast-food {
+	background-position:-181px -973px;
+	height:19px;
+	width:23px;
+}
+.icon.cutlery {
+	background-position:-222px -972px;
+	height:19px;
+	width:11px;
+}
+.icon.pizza {
+	background-position:-254px -971px;
+	height:22px;
+	width:19px;
+}
+.icon.birthday-cake {
+	background-position:-290px -970px;
+	height:22px;
+	width:20px;
+}
+.icon.tablet {
+	background-position:-325px -970px;
+	height:20px;
+	width:20px;
+}
+.icon.settings {
+	background-position:-2px -1009px;
+	height:19px;
+	width:19px;
+}
+.icon.bullets {
+	background-position:-37px -1010px;
+	height:18px;
+	width:20px;
+}
+.icon.cardio {
+	background-position:-73px -1048px;
+	height:20px;
+	width:19px;
+}
+.icon.t-shirt {
+	background-position:-109px -1010px;
+	height:18px;
+	width:22px;
+}
+.icon.pants {
+	background-position:-147px -1009px;
+	height:19px;
+	width:15px;
+}
+.icon.sweater {
+	background-position:-180px -1009px;
+	height:19px;
+	width:23px;
+}
+.icon.fabric {
+	background-position:-217px -1010px;
+	height:17px;
+	width:20px;
+}
+.icon.leather {
+	background-position:-255px -1009px;
+	height:19px;
+	width:19px;
+}
+.icon.scissors {
+	background-position:-291px -1008px;
+	height:22px;
+	width:18px;
+}
+.icon.podium {
+	background-position:-324px -1010px;
+	height:17px;
+	width:21px;
+}
+.icon.skull {
+	background-position:-2px -1044px;
+	height:20px;
+	width:17px;
+}
+.icon.celebration {
+	background-position:-37px -1044px;
+	height:20px;
+	width:19px;
+}
+.icon.tea-kettle {
+	background-position:-74px -1045px;
+	height:19px;
+	width:20px;
+}
+.icon.french-press {
+	background-position:-110px -1044px;
+	height:20px;
+	width:18px;
+}
+.icon.coffe-cup {
+	background-position:-146px -1048px;
+	height:16px;
+	width:19px;
+}
+.icon.pot {
+	background-position:-181px -1045px;
+	height:18px;
+	width:21px;
+}
+.icon.grater {
+	background-position:-220px -1044px;
+	height:20px;
+	width:14px;
+}
+.icon.kettle {
+	background-position:-255px -1044px;
+	height:20px;
+	width:18px;
+}
+.icon.hospital {
+	background-position:-290px -1044px;
+	height:20px;
+	width:19px;
+}
+.icon.hospital-h {
+	background-position:-326px -1044px;
+	height:20px;
+	width:19px;
+}
+.icon.microphone {
+	background-position:-4px -1081px;
+	height:19px;
+	width:14px;
+}
+.icon.webcam {
+	background-position:-40px -1081px;
+	height:19px;
+	width:15px;
+}
+.icon.church {
+	background-position:-74px -1081px;
+	height:20px;
+	width:18px;
+}
+.icon.temple-islam {
+	background-position:-110px -1082px;
+	height:19px;
+	width:19px;
+}
+.icon.temple-hindu {
+	background-position:-146px -1082px;
+	height:19px;
+	width:19px;
+}
+.icon.temple-buddhist {
+	background-position:-181px -1083px;
+	height:18px;
+	width:22px;
+}
+.icon.electrical-socket-eu {
+	background-position:-219px -1082px;
+	height:18px;
+	width:18px;
+}
+.icon.electrical-socket-us {
+	background-position:-255px -1082px;
+	height:18px;
+	width:18px;
+}
+.icon.bomb {
+	background-position:-291px -1081px;
+	height:20px;
+	width:20px;
+}
+.icon.comments {
+	background-position:-326px -1081px;
+	height:19px;
+	width:19px;
+}
+.icon.flower {
+	background-position:-4px -1116px;
+	height:20px;
+	width:15px;
+}
+.icon.baseball {
+	background-position:-37px -1116px;
+	height:20px;
+	width:20px;
+}
+.icon.rugby {
+	background-position:-75px -1117px;
+	height:19px;
+	width:17px;
+}
+.icon.ax {
+	background-position:-109px -1117px;
+	height:19px;
+	width:20px;
+}
+.icon.table-tennis {
+	background-position:-146px -1117px;
+	height:19px;
+	width:19px;
+}
+.icon.bowling {
+	background-position:-182px -1117px;
+	height:19px;
+	width:19px;
+}
+.icon.tree-conifer {
+	background-position:-219px -1117px;
+	height:19px;
+	width:16px;
+}
+.icon.tree-deciduous {
+	background-position:-255px -1116px;
+	height:20px;
+	width:16px;
+}
+.icon.more-items {
+	background-position:-291px -1117px;
+	height:19px;
+	width:16px;
+}
+.icon.sort {
+	background-position:-326px -1117px;
+	height:20px;
+	width:19px;
+}
+.icon.filter {
+	background-position:-3px -1153px;
+	height:20px;
+	width:16px;
+}
+.icon.gamepad {
+	background-position:-37px -1154px;
+	height:15px;
+	width:20px;
+}
+.icon.playing-dices {
+	background-position:-74px -1152px;
+	height:19px;
+	width:21px;
+}
+.icon.calculator {
+	background-position:-111px -1152px;
+	height:20px;
+	width:17px;
+}
+.icon.tie {
+	background-position:-150px -1153px;
+	height:20px;
+	width:9px;
+}
+.icon.wallet {
+	background-position:-181px -1154px;
+	height:17px;
+	width:19px;
+}
+.icon.share-2 {
+	background-position:-218px -1153px;
+	height:18px;
+	width:17px;
+}
+.icon.sampler {
+	background-position:-253px -1152px;
+	height:18px;
+	width:21px;
+}
+.icon.piano {
+	background-position:-290px -1152px;
+	height:20px;
+	width:18px;
+}
+.icon.web-browser {
+	background-position:-326px -1152px;
+	height:18px;
+	width:19px;
+}
+.icon.blog {
+	background-position:-2px -1190px;
+	height:18px;
+	width:17px;
+}
+.icon.dashboard {
+	background-position:-37px -1188px;
+	height:19px;
+	width:19px;
+}
+.icon.certificate {
+	background-position:-77px -1189px;
+	height:20px;
+	width:13px;
+}
+.icon.bell {
+	background-position:-110px -1189px;
+	height:19px;
+	width:19px;
+}
+.icon.candle {
+	background-position:-147px -1188px;
+	height:20px;
+	width:15px;
+}
+.icon.pin-classic {
+	background-position:-182px -1189px;
+	height:19px;
+	width:19px;
+}
+.icon.iphone-shake {
+	background-position:-218px -1189px;
+	height:19px;
+	width:19px;
+}
+.icon.pin-flag {
+	background-position:-253px -1190px;
+	height:17px;
+	width:23px;
+}
+.icon.turtle {
+	background-position:-290px -1192px;
+	height:13px;
+	width:21px;
+}
+.icon.rabbit {
+	background-position:-326px -1192px;
+	height:17px;
+	width:20px;
+}
+.icon.globe {
+	background-position:-2px -1225px;
+	height:19px;
+	width:19px;
+}
+.icon.briefcase {
+	background-position:-37px -1225px;
+	height:18px;
+	width:19px;
+}
+.icon.hdd {
+	background-position:-74px -1226px;
+	height:17px;
+	width:18px;
+}
+.icon.thumbs-up {
+	background-position:-110px -1225px;
+	height:17px;
+	width:18px;
+}
+.icon.thumbs-down {
+	background-position:-146px -1226px;
+	height:17px;
+	width:19px;
+}
+.icon.hand-right {
+	background-position:-182px -1226px;
+	height:16px;
+	width:20px;
+}
+.icon.hand-left {
+	background-position:-216px -1226px;
+	height:16px;
+	width:21px;
+}
+.icon.hand-up {
+	background-position:-256px -1223px;
+	height:21px;
+	width:14px;
+}
+.icon.hand-down {
+	background-position:-292px -1225px;
+	height:21px;
+	width:15px;
+}
+.icon.fullscreen {
+	background-position:-326px -1225px;
+	height:19px;
+	width:19px;
+}
+.icon.shopping-bag {
+	background-position:-2px -1259px;
+	height:21px;
+	width:17px;
+}
+.icon.book-open {
+	background-position:-36px -1262px;
+	height:18px;
+	width:20px;
+}
+.icon.nameplate {
+	background-position:-74px -1262px;
+	height:17px;
+	width:18px;
+}
+.icon.nameplate-alt {
+	background-position:-110px -1261px;
+	height:18px;
+	width:18px;
+}
+.icon.vases {
+	background-position:-146px -1261px;
+	height:20px;
+	width:19px;
+}
+.icon.announcement {
+	background-position:-181px -1262px;
+	height:16px;
+	width:19px;
+}
+.icon.dumbbell {
+	background-position:-217px -1265px;
+	height:13px;
+	width:20px;
+}
+.icon.suitcase {
+	background-position:-254px -1262px;
+	height:18px;
+	width:19px;
+}
+.icon.file-import {
+	background-position:-291px -1260px;
+	height:20px;
+	width:17px;
+}
+.icon.file-export {
+	background-position:-315px -1259px;
+	height:20px;
+	width:17px;
+}
+.icon.pinterest {
+	background-position:-2px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.dropbox-i {
+	background-position:-37px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.google-alt {
+	background-position:-74px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.jolicloud {
+	background-position:-110px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.yahoo {
+	background-position:-146px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.blogger {
+	background-position:-182px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.picasa {
+	background-position:-218px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.amazon {
+	background-position:-254px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.tumblr {
+	background-position:-290px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.wordpress {
+	background-position:-326px -1297px;
+	height:19px;
+	width:19px;
+}
+.icon.instapaper {
+	background-position:-2px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.evernote {
+	background-position:-37px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.xing {
+	background-position:-74px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.zootool {
+	background-position:-110px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.dribbble {
+	background-position:-146px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.deviantart {
+	background-position:-182px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.read-it-later {
+	background-position:-218px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.linked-in {
+	background-position:-254px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.forrst {
+	background-position:-290px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.pinboard {
+	background-position:-326px -1333px;
+	height:19px;
+	width:19px;
+}
+.icon.behance {
+	background-position:-2px -1368px;
+	height:20px;
+	width:18px;
+}
+.icon.github {
+	background-position:-38px -1368px;
+	height:20px;
+	width:19px;
+}
+.icon.youtube-i {
+	background-position:-74px -1368px;
+	height:20px;
+	width:18px;
+}
+.icon.skitch {
+	background-position:-110px -1368px;
+	height:20px;
+	width:18px;
+}
+.icon.square-4 {
+	background-position:-146px -1368px;
+	height:20px;
+	width:19px;
+}
+.icon.quora {
+	background-position:-182px -1368px;
+	height:20px;
+	width:18px;
+}
+.icon.google-plus {
+	background-position:-218px -1368px;
+	height:20px;
+	width:18px;
+}
+.icon.spootify {
+	background-position:-254px -1368px;
+	height:20px;
+	width:19px;
+}
+.icon.stumbleupon {
+	background-position:-290px -1368px;
+	height:20px;
+	width:18px;
+}
+.icon.readability {
+	background-position:-326px -1368px;
+	height:20px;
+	width:19px;
+}
+.icon.facebook-i {
+	background-position:-2px -1405px;
+	height:18px;
+	width:18px;
+}
+.icon.twitter-t {
+	background-position:-37px -1405px;
+	height:18px;
+	width:19px;
+}
+.icon.twitter-i {
+	background-position:-74px -1405px;
+	height:18px;
+	width:18px;
+}
+.icon.buzz {
+	background-position:-110px -1405px;
+	height:18px;
+	width:18px;
+}
+.icon.vimeo-i {
+	background-position:-146px -1405px;
+	height:18px;
+	width:19px;
+}
+.icon.flickr-i {
+	background-position:-182px -1405px;
+	height:18px;
+	width:18px;
+}
+.icon.last-fm {
+	background-position:-218px -1405px;
+	height:18px;
+	width:18px;
+}
+.icon.rss {
+	background-position:-254px -1405px;
+	height:18px;
+	width:19px;
+}
+.icon.skype-i {
+	background-position:-290px -1405px;
+	height:18px;
+	width:18px;
+}
+.icon.e-mail {
+	background-position:-326px -1405px;
+	height:18px;
+	width:19px;
+}
+.icon.circle-plus, .icon.download {
+	background-position:-1px -684px;
+	height:20px;
+	width:20px;
+}
+.icon.circle-minus, .icon.upload {
+	background-position:-38px -684px;
+	height:20px;
+	width:19px;
+}

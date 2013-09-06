@@ -1,0 +1,108 @@
+/* Blue Skin Colors
+================================================== */
+
+a, a:visited, 
+.navSide li a:hover, 
+.navSide li.active a span, 
+.thumbLink:hover h3, 
+.accTrigger a:hover,
+span.color,
+.postTabLink:hover .postTab p,
+blockquote:before,
+blockquote:after,
+.tp-caption.themeColor,
+#logo a,
+.tp-caption.big_themeColor
+{ 
+	color: #eb8500;
+}
+
+
+#navMain ul ul li a:hover,
+#filters a:hover,
+.selected,
+.selected:hover,
+.blogTags a:hover,
+.testimonials.testTheme .testimonialText,
+.footerBottomText,
+.highlight,
+.dropcap,
+.footerMiddle
+{
+    background:#eb8500;
+}
+
+
+.selected,
+.selected:hover
+{
+	background: #eb8500 !important;
+}
+
+
+#backtotop a:hover, 
+.topDropPanel, 
+.bar, 
+ul.tabs li a, 
+ul.pageList li a, 
+table.tableGeneric tr:hover td ,
+.featureIcon.analytics,
+.featureIcon.cart,
+.featureIcon.earplugs,
+.featureIcon.imac,
+.featureIcon.iphone,
+.featureIcon.lightbulb,
+.featureIcon.rabbit,
+.featureIcon.vector,
+#whiteIcons
+{
+	background-color: #eb8500;
+}
+ 
+.iconWrapper, #ta1, #ta2, #ta3, #ta4, #ta5, #ta6, #ta7, #ta8,
+#servicesAni:hover #sa1,
+#servicesAni:hover #sa2,
+#servicesAni:hover #sa3,
+#servicesAni:hover #sa4,
+#servicesAni:hover #sa5,
+#servicesAni:hover #sa6,
+#servicesAni:hover #sa7,
+#servicesAni:hover #sa8 
+{
+	background-color: rgba(235,133,0,0.7);
+}
+
+.navSide li.active a span,
+.thumbLink:hover h3 
+{
+	border-bottom-color: #eb8500;
+}
+
+.flex-direction-nav a.flex-next {background-position: 0 300px;}
+.flex-direction-nav a.flex-next:hover {background-position: 60px 300px;}
+.flex-direction-nav a.flex-prev {background-position: 90px 300px;}
+.flex-direction-nav a.flex-prev:hover {background-position: 30px 300px;}
+.testimonials.testTheme .testimonialAuthor {background-position: 30px -21px;}
+#topDropBut{background-position: 0px -19px;}
+#topDropBut:hover{background-position: -34px -19px;}
+.logoIcon {background-position: center -50px;}
+.topBorder{background-position: center -28px; border-top: 5px solid #eb8500;}
+.footerBottomImage {background-position: center -33px;}
+.prev {background-position: 0px -40px;}
+.next {background-position: -20px -40px;}
+.prev:hover {background-position: -40px -40px;}
+.next:hover {background-position: -60px -40px;}
+
+.button.themeButton {
+	border: 1px solid #ca4d0b;
+	background-image:         linear-gradient(bottom, #dc5e1c 0%, #eb8500 100%);
+	background-image:      -o-linear-gradient(bottom, #dc5e1c 0%, #eb8500 100%);
+	background-image:     -ms-linear-gradient(bottom, #dc5e1c 0%, #eb8500 100%);
+	background-image:    -moz-linear-gradient(bottom, #dc5e1c 0%, #eb8500 100%);
+	background-image: -webkit-linear-gradient(bottom, #dc5e1c 0%, #eb8500 100%);
+	background-color: #dc5e1c;
+	color:#fff;
+	text-shadow: 1px 1px 0px #bf531a;
+}
+
+.button.themeButton:hover {background: #dc5e1c;}

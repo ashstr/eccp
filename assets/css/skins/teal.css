@@ -1,0 +1,108 @@
+/* Blue Skin Colors
+================================================== */
+
+a, a:visited, 
+.navSide li a:hover, 
+.navSide li.active a span, 
+.thumbLink:hover h3, 
+.accTrigger a:hover,
+span.color,
+.postTabLink:hover .postTab p,
+blockquote:before,
+blockquote:after,
+.tp-caption.themeColor,
+#logo a,
+.tp-caption.big_themeColor
+{ 
+	color: #168e92;
+}
+
+
+#navMain ul ul li a:hover,
+#filters a:hover,
+.selected,
+.selected:hover,
+.blogTags a:hover,
+.testimonials.testTheme .testimonialText,
+.footerBottomText,
+.highlight,
+.dropcap,
+.footerMiddle
+{
+    background:#168e92;
+}
+
+
+.selected,
+.selected:hover
+{
+	background: #168e92 !important;
+}
+
+
+#backtotop a:hover, 
+.topDropPanel, 
+.bar, 
+ul.tabs li a, 
+ul.pageList li a, 
+table.tableGeneric tr:hover td ,
+.featureIcon.analytics,
+.featureIcon.cart,
+.featureIcon.earplugs,
+.featureIcon.imac,
+.featureIcon.iphone,
+.featureIcon.lightbulb,
+.featureIcon.rabbit,
+.featureIcon.vector,
+#whiteIcons
+{
+	background-color: #168e92;
+}
+ 
+.iconWrapper, #ta1, #ta2, #ta3, #ta4, #ta5, #ta6, #ta7, #ta8,
+#servicesAni:hover #sa1,
+#servicesAni:hover #sa2,
+#servicesAni:hover #sa3,
+#servicesAni:hover #sa4,
+#servicesAni:hover #sa5,
+#servicesAni:hover #sa6,
+#servicesAni:hover #sa7,
+#servicesAni:hover #sa8
+{
+	background-color: rgba(22,142,146,0.7);
+}
+
+.navSide li.active a span,
+.thumbLink:hover h3 
+{
+	border-bottom-color: #168e92;
+}
+
+.flex-direction-nav a.flex-next {background-position: 0 120px;}
+.flex-direction-nav a.flex-next:hover {background-position: 60px 120px;}
+.flex-direction-nav a.flex-prev {background-position: 90px 120px;}
+.flex-direction-nav a.flex-prev:hover {background-position: 30px 120px;}
+.testimonials.testTheme .testimonialAuthor {background-position: 30px -84px;}
+#topDropBut{background-position: 0px -76px;}
+#topDropBut:hover{background-position: -34px -76px;}
+.logoIcon {background-position: center -200px;}
+.topBorder{background-position: center -112px; border-top: 5px solid #168e92;}
+.footerBottomImage {background-position: center -132px;}
+.prev {background-position: 0px -160px;}
+.next {background-position: -20px -160px;}
+.prev:hover {background-position: -40px -160px;}
+.next:hover {background-position: -60px -160px;}
+
+.button.themeButton {
+	border: 1px solid #036265;
+	background-image:         linear-gradient(bottom, #097275 0%, #168e92 100%);
+	background-image:      -o-linear-gradient(bottom, #097275 0%, #168e92 100%);
+	background-image:     -ms-linear-gradient(bottom, #097275 0%, #168e92 100%);
+	background-image:    -moz-linear-gradient(bottom, #097275 0%, #168e92 100%);
+	background-image: -webkit-linear-gradient(bottom, #097275 0%, #168e92 100%);
+	background-color: #097275;
+	color:#fff;
+	text-shadow: 1px 1px 0px #036265;
+}
+
+.button.themeButton:hover {background: #097275;}
