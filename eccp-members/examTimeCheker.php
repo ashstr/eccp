@@ -13,6 +13,6 @@ if (mysqli_num_rows($result)) {
 	$timeLeft = $examTimeResultRow[0] + $UETRow[0] - $currentTime;
 	echo $timeLeft;
 } else {
-mysqli_query
+
 }
 ?>
