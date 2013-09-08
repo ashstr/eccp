@@ -13,6 +13,9 @@ if (mysqli_num_rows($result)) {
 	$timeLeft = $examTimeResultRow[0] + $UETRow[0] - $currentTime;
 	echo $timeLeft;
 } else {
-
+	mysqli_query("insert into starting_time (uid,eid,starting_time) values ($uid,$eid,$currentTime)");
+	$examTimeResult = mysqli_query("SELECT exam_period FROM exam WHERE eid=$eid");
+	$examTimeResultRow = mysqli_fetch_array($examTimeResult);
+	echo $examTimeResultRow[0];
 }
 ?>
