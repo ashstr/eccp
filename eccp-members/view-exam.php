@@ -76,9 +76,33 @@
 	if($insertFlag){
 
  	   /******************************* Load Qustaion  *********************************/
-	   $GetQTitle   = mysql_query("SELECT * FROM  `questions` WHERE `ID` = '$QustaionID'");
-	   $GetQTitleR  = mysql_fetch_array($GetQTitle);
-	   $TheQustaion = $GetQTitleR["ques"]; 	?>
+ 	   if (!isset($_SESSION['qarray'])){
+	   $GetQTitle   = mysql_query("SELECT qid FROM  questions,container WHERE container.qid=questions.id AND container.eid=$QustaionID");
+	   $_SESSION['arsize']=mysql_num_rows($GetQTitle);
+	   $_SESSION['counter']=0;
+	  
+	  $c=0;
+	  while($row = mysql_fetch_array($GetQTitle))
+  {
+  $_SESSION['qarray'][$c]=$row['qid'];
+  echo $_SESSION['qarray'][$c]."<br>";
+  $c++;
+  }
+	   }
+	   if ($_SESSION['counter']<$_SESSION['arsize']){
+	   $temp2=$_SESSION['qarray'][$_SESSION['counter']];
+	   $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	   $GetQTitleR  = mysql_fetch_array($getQu);
+	   $TheQustaion = $GetQTitleR["ques"];
+	   $_SESSION['counter']=$_SESSION['counter']+1;
+	   }
+	   if ($_SESSION['counter']==$_SESSION['arsize']){
+		$_SESSION['counter']=0; // go back to the first question after reaching the last one!
+	   	// require("unauthorizedexam.php");
+		// die();
+	   }
+	  
+	   ?>
        
 <!DOCTYPE html>
   <html>
@@ -152,7 +176,8 @@
 
 
 	 $LoadOp = mysql_query("SELECT * FROM  `mc_so` 
-							WHERE  `qid` =  '$QustaionID' AND (`flag` = '1' OR `flag` ='3') ORDER BY `qid` ASC ");
+							WHERE  `qid` =  '$temp2' AND (`flag` = '1' OR `flag` ='3') ORDER BY `qid` ASC ");
+							// I HAVE NO IDEA WHAT DOES FLAG DO -- ZAHRAN
 					   
   /// next Questions
 	  $next   = mysql_query("SELECT * FROM `container` WHERE `qid` > '$QustaionID' and `eid` = '$examID9' ORDER BY `qid` ASC LIMIT 1");
