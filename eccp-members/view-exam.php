@@ -44,7 +44,10 @@
 	$TITLE = $RDU["title"];
 	$Times = $RDU["exam_period"];
  /*********************************************************************************/
-
+// check which button have been pressed
+if ( isset( $_GET["flag"] ) && !empty( $_GET["flag"] ) ){
+	$flag=intval($_GET["flag"]);
+}
 
  /******************************* Load All Exam Qustaion From Container *********************/
 /* 	$Get0F1 = mysql_query("SELECT * FROM  `container` WHERE `eid` = '$examID9' ORDER BY RAND() "); */
@@ -72,7 +75,7 @@
 	/*	$insertFlag  = mysql_query("insert into `exam_checker` (`time`, `uid`, `exam_id`, `exam_period`, `flag`)VALUES(NOW(), '$NovaUIDValus', '$examID9', '$Times', '1')"); */
 		$insertFlag  = mysql_query("insert into `exam_checker` (`time`, `uid`, `exam_id`, `exam_period`)VALUES(NOW(), '$NovaUIDValus', '$examID9', '$Times' )");
 	}
-	
+	$c=0;
 	if($insertFlag){
 
  	   /******************************* Load Qustaion  *********************************/
@@ -80,15 +83,24 @@
 	   $GetQTitle   = mysql_query("SELECT qid FROM  questions,container WHERE container.qid=questions.id AND container.eid=$QustaionID");
 	   $_SESSION['arsize']=mysql_num_rows($GetQTitle);
 	   $_SESSION['counter']=0;
-	  
-	  $c=0;
-	  while($row = mysql_fetch_array($GetQTitle))
-  {
-  $_SESSION['qarray'][$c]=$row['qid'];
-  echo $_SESSION['qarray'][$c]."<br>";
-  $c++;
-  }
+	   while($row = mysql_fetch_array($GetQTitle))
+		  {
+		  $_SESSION['qarray'][$c]=$row['qid'];
+		  //echo $_SESSION['qarray'][$c]."<br>";
+		  $c++;
+		  echo $c;
+		  }
+		$_SESSION['pres']=$c-1; // to save the number of the rows, it keeps giving out errors !!
 	   }
+	if ($flag==0){
+		$_SESSION['counter']=0;
+		$temp2=$_SESSION['qarray'][$_SESSION['counter']];
+	    $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	    $GetQTitleR  = mysql_fetch_array($getQu);
+	    $TheQustaion = $GetQTitleR["ques"];
+		$_SESSION['counter']++; // to advance to next question instead of showing it twice
+	}
+	if ($flag==1){
 	   if ($_SESSION['counter']<$_SESSION['arsize']){
 	   $temp2=$_SESSION['qarray'][$_SESSION['counter']];
 	   $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
@@ -101,7 +113,21 @@
 	   	// require("unauthorizedexam.php");
 		// die();
 	   }
-	  
+	}
+	echo $_SESSION['pres'];
+	if ($flag==2){
+		$_SESSION['counter']--;
+		if ($_SESSION['counter']<0){
+			$temp2=$_SESSION['qarray'][$_SESSION['pres']];
+			$_SESSION['counter']=$_SESSION['pres'];
+		}
+		else {
+			$temp2=$_SESSION['qarray'][$_SESSION['counter']];
+		}
+	    $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	    $GetQTitleR  = mysql_fetch_array($getQu);
+	    $TheQustaion = $GetQTitleR["ques"];
+	}
 	   ?>
        
 <!DOCTYPE html>
@@ -194,11 +220,16 @@
 
  <div style="padding-right:20px;">
  
-   <a style="margin:5px;" class="bluishBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>"><span style="color:#FFFFFF;">First Question</span></a>
+   <a style="margin:5px;" class="bluishBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>&flag=0"><span style="color:#FFFFFF;">First Question</span></a>
    
-   <a style="margin:5px;" class="yellowBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>"><span style="color:#FFFFFF;">Next Question</span></a>
+   <a style="margin:5px;" class="yellowBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>&flag=1"><span style="color:#FFFFFF;">Next Question</span></a>
    
-   <a style="margin:5px;" class="yellowBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>"><span style="color:#FFFFFF;">Previous Question </span></a>
+   <a style="margin:5px;" class="yellowBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>&flag=2"><span style="color:#FFFFFF;">Previous Question </span></a>
+   <!-- // added flag to the url to identify which button have been pressed 
+   // 0 for first
+   // 1 for next
+   // 2 for previous
+   // ZAHARAN -->
    
    
    
@@ -223,7 +254,9 @@
  <div class="one_wrap">
     	<div class="widget">
         	<div class="widget_title"><span class="iconsweet">f</span>
-        	<h5><?php echo $TITLE; ?> - ECCP</h5>
+        	<h5><?php echo $TITLE; ?> - ECCP - Question <?php echo $temp2 ?> </h5>
+        	<!--// ADDED BY ZAHRAN
+        	// TRACK QUESTION NUMBER --> 
         	</div>
             <div class="widget_body">
             	<!--Activity Table-->
