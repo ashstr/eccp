@@ -1,6 +1,5 @@
-<?php 
-  include_once("Library/config.php"); 
-
+<?php
+include_once ("Library/config.php");
 /******************************** Validation Action 1 **************************************
 	Chack if user was login really or not & if the exam id was send and not empty          */	
 	
@@ -9,7 +8,7 @@
 	 
 	$NovaUIDValus = $_SESSION["UID"]; 	 // This User ID
 	$examID9      = intval($_GET["es"]);  // Exam ID
-
+	$_SESSION["eid"]=$examID9;
 	 
 	  	if(empty($examID9)){ ?>
         	<script type="text/javascript">
