@@ -5,6 +5,6 @@
 // $DBpass="%OObgl_?tQPO";    // online now 04/03/2013
 
   $DBName="eccp"; // local
-  $DBpass=""; // Local
+  $DBpass="password"; // Local
   $DBuser="root"; // local 
   ?>
