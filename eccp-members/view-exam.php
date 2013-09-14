@@ -331,7 +331,7 @@ if ( isset( $_GET["flag"] ) && !empty( $_GET["flag"] ) ){
             	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
                     <tr align="left">
                       <th colspan="2" align="left">
-					   <?php echo html_entity_decode($TheQuestion);  // Show The Qusetions ?>
+					   <?php echo html_entity_decode($TheQuestion);  // Show The Qusetion ?>
                       </th>
                       </tr>
    <?php // load the options
