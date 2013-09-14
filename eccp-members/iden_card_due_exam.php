@@ -1,5 +1,6 @@
 <script src="js/countdown.js"></script>
 <!--	<script src="js/info2.js"></script>-->
+<?php include("examTimeCheker.php"); ?>
 <?php
 	//$timezone = "Asia/Riyadh";
 	//if(function_exists('date_default_timezone_set')) { date_default_timezone_set('GMT+3'); }else{ "No"; }
@@ -123,12 +124,13 @@
   <dd> <a class="welcome_user_eXAM" href="#">Welcome,  <strong><?php echo $_SESSION["my_name"]; ?></strong></a>
 
 <script>
+	
   var myCountdown1 = new Countdown( {
 			 width    : <?php echo $width; ?>,      // Defaults to 200 x 30 pixels, you can specify a custom size here
 			 width   : <?php echo $width; ?>,       //
 			// inline	 	: true,     // If inline, text will wrap around object, otherwise this countdown object will consume the entire "line"
 			   style   	: "flip", // flip / boring boring whatever (only "flip" uses image/animation)
-			   time: 60,
+			   time: parseInt(<?php echo $timeLeft ?>), 
 
 			  rangeHi  : "<?php echo $rangeHi; ?>",   // The highest unit of time to display
 			  year : <?php echo date("Y"); ?>,
@@ -139,7 +141,17 @@
 			  minute : <?php echo $minute; ?>,
 			  second : 0 // < - no comma on last item!!
    	}
-			); </script> </dd>
+			);
+			setTimeout(function(){
+				//##############################################
+				//##############################################
+				//##############################################
+				//####Enter The Function Name Here (Calling)####
+				//##############################################
+				//##############################################
+			},myCountdown1.af.time*1000);
+			
+			 </script> </dd>
 </dl>
 <br/>
  <?php // date("g")+1; ?>

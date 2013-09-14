@@ -1,6 +1,5 @@
-<?php 
-  include_once("Library/config.php"); 
-
+<?php
+include_once ("Library/config.php");
 /******************************** Validation Action 1 **************************************
 	Chack if user was login really or not & if the exam id was send and not empty          */	
 	
@@ -9,7 +8,7 @@
 	 
 	$NovaUIDValus = $_SESSION["UID"]; 	 // This User ID
 	$examID9      = intval($_GET["es"]);  // Exam ID
-
+	$_SESSION["eid"]=$examID9;
 	 
 	  	if(empty($examID9)){ ?>
         	<script type="text/javascript">
@@ -173,13 +172,19 @@ if ( isset( $_GET["flag"] ) && !empty( $_GET["flag"] ) ){
 	    $TheQuestion = $GetQTitleR["ques"];
 	}
 	if (isset($_REQUEST['flag'])){
-		$check=mysql_query("SELECT * FROM flag WHERE UID='".$_SESSION['UID']."' AND qid=".$_SESSION['prevQuesID']);
+		$check=mysql_query("SELECT * FROM flagedQ WHERE UID=".$_SESSION['UID']." AND qid=".$_SESSION['qarray'][$_SESSION['counter']]." 	AND eid=".$_SESSION['eid']);
 		if (mysql_num_rows($check)){
-			mysql_query("DELETE FROM flag WHERE UID='".$_SESSION['UID']."' AND qid=".$_SESSION['prevQuesID']);
+			mysql_query("DELETE FROM flagedQ WHERE UID=".$_SESSION['UID']." AND qid=".$_SESSION['qarray'][$_SESSION['counter']]." AND eid=".$_SESSION['eid']);
 		}
 		else {
-			mysql_query("INSERT INTO flag values ('".$_SESSION['UID']."',".$_SESSION['prevQuesID'].")");
+			echo "sssssssssss";
+			mysql_query("INSERT INTO flagedQ (uid,qid,eid) values (".$_SESSION['UID'].",".$_SESSION['qarray'][$_SESSION['counter']].",".$_SESSION['eid'].")");
 		}
+		$temp2=$_SESSION['qarray'][$_SESSION['counter']];
+		$_SESSION['prevQuesID']=$temp2;
+	    $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	    $GetQTitleR  = mysql_fetch_array($getQu);
+	    $TheQuestion = $GetQTitleR["ques"];
 	}
 	if (!(isset($_REQUEST['firstBtn'])||isset($_REQUEST['nextBtn'])||isset($_REQUEST['prvBtn'])||isset($_REQUEST['goTo'])||isset($_REQUEST['flag'])
 	||isset($_REQUEST['prevFlag'])||isset($_REQUEST['nextFlag']))){
