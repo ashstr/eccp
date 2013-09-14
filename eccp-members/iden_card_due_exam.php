@@ -125,14 +125,12 @@
 
 <script>
 	
-	alert("<?php $timeLeft ?>");
-
   var myCountdown1 = new Countdown( {
 			 width    : <?php echo $width; ?>,      // Defaults to 200 x 30 pixels, you can specify a custom size here
 			 width   : <?php echo $width; ?>,       //
 			// inline	 	: true,     // If inline, text will wrap around object, otherwise this countdown object will consume the entire "line"
 			   style   	: "flip", // flip / boring boring whatever (only "flip" uses image/animation)
-			   time: 10, 
+			   time: parseInt(<?php echo $timeLeft ?>), 
 
 			  rangeHi  : "<?php echo $rangeHi; ?>",   // The highest unit of time to display
 			  year : <?php echo date("Y"); ?>,
