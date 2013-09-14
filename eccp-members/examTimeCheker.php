@@ -12,6 +12,9 @@ if (mysql_num_rows($UETresult) != 0) {
 	$examTime= mysql_query("SELECT exam_period FROM exam WHERE ID=$eid");
 	$examTime = mysql_fetch_array($examTime);
 	$timeLeft = $examTime[0]*60 + $UETRow[0] - $local;
+	if($timeLeft<0){
+		header('Location: ./TimeExceded.html');
+	}
 } else {
 	mysql_query("INSERT INTO user_exam_time (uid,eid,starting_time) values ($uid,$eid,$local)");
 	$examTime = mysql_query("SELECT exam_period FROM exam WHERE ID=$eid");
