@@ -1,0 +1,13 @@
+Create Table QandA(
+UID Int(11),
+ExID int(11),
+QID int(11),
+AID int(11),
+CONSTRAINT pk_PersonID PRIMARY KEY (UID,ExID,QID,AID),
+FOREIGN KEY (UID) REFERENCES  memeber(UID),
+FOREIGN KEY (ExID) REFERENCES exam(ID),
+FOREIGN KEY (QID) REFERENCES questions(id),
+FOREIGN KEY (AID) REFERENCES mc_so(ID)
+);
+
+
