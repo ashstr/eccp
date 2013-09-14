@@ -172,12 +172,12 @@ if ( isset( $_GET["flag"] ) && !empty( $_GET["flag"] ) ){
 	    $TheQuestion = $GetQTitleR["ques"];
 	}
 	if (isset($_REQUEST['flag'])){
-		$check=mysql_query("SELECT * FROM flag WHERE UID='".$_SESSION['UID']."' AND qid=".$_SESSION['prevQuesID']);
+		$check=mysql_query("SELECT * FROM flag WHERE UID='".$_SESSION['UID']."' AND qid=".$_SESSION['qarray'][$_SESSION['counter']]);
 		if (mysql_num_rows($check)){
-			mysql_query("DELETE FROM flag WHERE UID='".$_SESSION['UID']."' AND qid=".$_SESSION['prevQuesID']);
+			mysql_query("DELETE FROM flag WHERE UID='".$_SESSION['UID']."' AND qid=".$_SESSION['qarray'][$_SESSION['counter']]);
 		}
 		else {
-			mysql_query("INSERT INTO flag values ('".$_SESSION['UID']."',".$_SESSION['prevQuesID'].")");
+			mysql_query("INSERT INTO flag values ('".$_SESSION['UID']."',".$_SESSION['counter'].")");
 		}
 	}
 	if (!(isset($_REQUEST['firstBtn'])||isset($_REQUEST['nextBtn'])||isset($_REQUEST['prvBtn'])||isset($_REQUEST['goTo'])||isset($_REQUEST['flag'])
