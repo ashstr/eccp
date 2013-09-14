@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Time Exceded</title>
+		<script>
+			var count = 1;
+			setTimeout(function() {
+				window.location.href="./index.php";
+			}, 5000);
+			setInterval(function() {
+				document.getElementById("p").innerHTML = count;
+				count++;
+			}, 1000);
+		</script>
+	</head>
+	<body>
+		<h1>Exam Time Exceded</h1>
+		<h3>Going to home page in ...  <span id="p"></span></h3>
+		
+	</body>
+</html>
