@@ -1,6 +1,5 @@
-<?php 
-  include_once("Library/config.php"); 
-
+<?php
+include_once ("Library/config.php");
 /******************************** Validation Action 1 **************************************
 	Chack if user was login really or not & if the exam id was send and not empty          */	
 	
@@ -9,7 +8,7 @@
 	 
 	$NovaUIDValus = $_SESSION["UID"]; 	 // This User ID
 	$examID9      = intval($_GET["es"]);  // Exam ID
-
+	$_SESSION["eid"]=$examID9;
 	 
 	  	if(empty($examID9)){ ?>
         	<script type="text/javascript">
@@ -44,7 +43,10 @@
 	$TITLE = $RDU["title"];
 	$Times = $RDU["exam_period"];
  /*********************************************************************************/
-
+// check which button have been pressed
+if ( isset( $_GET["flag"] ) && !empty( $_GET["flag"] ) ){
+	$flag=intval($_GET["flag"]);
+}
 
  /******************************* Load All Exam Qustaion From Container *********************/
 /* 	$Get0F1 = mysql_query("SELECT * FROM  `container` WHERE `eid` = '$examID9' ORDER BY RAND() "); */
@@ -72,13 +74,129 @@
 	/*	$insertFlag  = mysql_query("insert into `exam_checker` (`time`, `uid`, `exam_id`, `exam_period`, `flag`)VALUES(NOW(), '$NovaUIDValus', '$examID9', '$Times', '1')"); */
 		$insertFlag  = mysql_query("insert into `exam_checker` (`time`, `uid`, `exam_id`, `exam_period`)VALUES(NOW(), '$NovaUIDValus', '$examID9', '$Times' )");
 	}
-	
+	$c=0;
+	$quesnumber;
 	if($insertFlag){
-
+		// save answer in DB
+		// echo "INSERT INTO QandA VALUES ('".$_SESSION['UID']."',".$examID9.",".$_SESSION['prevQuesID'].",".$_POST['radioselect'].")";
+		$ansCheck = mysql_query("SELECT * FROM QandA WHERE UID='".$_SESSION['UID']."' AND ExID=$examID9 AND QID=".$_SESSION['prevQuesID']);
+		if (!mysql_num_rows($ansCheck)){
+			mysql_query("INSERT INTO QandA VALUES ('".$_SESSION['UID']."',".$examID9.",".$_SESSION['prevQuesID'].",".$_POST['radioselect'].")");
+		}
+		else {
+			mysql_query("UPDATE QandA set AID=".$_POST['radioselect']." WHERE UID='".$_SESSION['UID']."' AND ExID=$examID9 AND QID=".$_SESSION['prevQuesID']);
+		}
  	   /******************************* Load Qustaion  *********************************/
-	   $GetQTitle   = mysql_query("SELECT * FROM  `questions` WHERE `ID` = '$QustaionID'");
-	   $GetQTitleR  = mysql_fetch_array($GetQTitle);
-	   $TheQustaion = $GetQTitleR["ques"]; 	?>
+ 	   if (!isset($_SESSION['qarray'])){
+ 	   	echo "hello";
+	   $GetQTitle   = mysql_query("SELECT qid FROM  questions,container WHERE container.qid=questions.id AND container.eid=$QustaionID");
+	   $_SESSION['arsize']=mysql_num_rows($GetQTitle);
+	   $_SESSION['counter']=0;
+	   while($row = mysql_fetch_array($GetQTitle))
+		  {
+		  $_SESSION['qarray'][$c]=$row['qid'];
+		  //echo $_SESSION['qarray'][$c]."<br>";
+		  $c++;
+		  echo $c;
+		  }
+		$_SESSION['pres']=$c-1; // to save the number of the rows, it keeps giving out errors !!
+	   }
+	   
+	    if (isset($_REQUEST['firstBtn'])){
+		$_SESSION['counter']=0;
+		$temp2=$_SESSION['qarray'][$_SESSION['counter']];
+		$_SESSION['prevQuesID']=$temp2;
+	    $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	    $GetQTitleR  = mysql_fetch_array($getQu);
+	    $TheQuestion = $GetQTitleR["ques"];
+		$quesnumber=1;
+		$_SESSION['counter']++; // to advance to next question instead of showing it twice
+	}
+	
+	if (isset($_REQUEST['nextBtn'])){
+		if ($_SESSION['prevQuesID']==$_SESSION['qarray'][$_SESSION['counter']]&&$_SESSION['counter']+1<$_SESSION['arsize'])
+			$_SESSION['counter']++;
+		if ($_SESSION['counter']==$_SESSION['arsize'])
+			$_SESSION['counter']=0;
+			echo $_SESSION['counter']."   ".$_SESSION['arsize'];
+	   if ($_SESSION['counter']<$_SESSION['arsize']){
+	   $temp2=$_SESSION['qarray'][$_SESSION['counter']];
+	   	$_SESSION['prevQuesID']=$temp2;
+	   $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	   $GetQTitleR  = mysql_fetch_array($getQu);
+	   $TheQuestion = $GetQTitleR["ques"];
+	   $_SESSION['counter']=$_SESSION['counter']+1;
+	   	$quesnumber=$_SESSION['counter'];
+	   }
+	   if ($_SESSION['counter']==$_SESSION['arsize']){
+		$_SESSION['counter']=0; // go back to the first question after reaching the last one!
+	   	// require("unauthorizedexam.php");
+		// die();
+	   }
+	}
+	if (isset($_REQUEST['prvBtn'])){
+		$_SESSION['counter']--;
+		if ($_SESSION['prevQuesID']==$_SESSION['qarray'][$_SESSION['counter']])
+			$_SESSION['counter']--;
+		if ($_SESSION['counter']<0){
+			$temp2=$_SESSION['qarray'][$_SESSION['pres']];
+			$_SESSION['counter']=$_SESSION['pres'];
+		}
+		else {
+			$temp2=$_SESSION['qarray'][$_SESSION['counter']];
+		}
+		$quesnumber=$_SESSION['counter']+1;
+		$_SESSION['prevQuesID']=$temp2;
+	    $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	    $GetQTitleR  = mysql_fetch_array($getQu);
+	    $TheQuestion = $GetQTitleR["ques"];
+		//$_SESSION['counter']++; // to advance to next question instead of showing it twice
+	}
+	if (isset($_REQUEST['goTo'])){
+		if (intval($_POST['QuesNum'])>count($_SESSION['qarray'])){
+			echo "<script> alert('Out of range, please enter a valid question number'); </script>";
+		}
+		else{
+			$_SESSION['counter']=intval($_POST['QuesNum'])-1;
+		}
+		// $arlength=count($_SESSION['qarray']);
+		// echo $_SESSION['counter'];
+		// for ($i=0;$i<$arlength;$i++){
+			// echo $_SESSION['qarray'][$i]."<br>";
+		// }
+			   	$quesnumber=$_SESSION['counter']+1;
+		$temp2=$_SESSION['qarray'][$_SESSION['counter']];
+		$_SESSION['prevQuesID']=$temp2;
+	    $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	    $GetQTitleR  = mysql_fetch_array($getQu);
+	    $TheQuestion = $GetQTitleR["ques"];
+	}
+	if (isset($_REQUEST['flag'])){
+		$check=mysql_query("SELECT * FROM flagedQ WHERE UID=".$_SESSION['UID']." AND qid=".$_SESSION['qarray'][$_SESSION['counter']]." 	AND eid=".$_SESSION['eid']);
+		if (mysql_num_rows($check)){
+			mysql_query("DELETE FROM flagedQ WHERE UID=".$_SESSION['UID']." AND qid=".$_SESSION['qarray'][$_SESSION['counter']]." AND eid=".$_SESSION['eid']);
+		}
+		else {
+			echo "sssssssssss";
+			mysql_query("INSERT INTO flagedQ (uid,qid,eid) values (".$_SESSION['UID'].",".$_SESSION['qarray'][$_SESSION['counter']].",".$_SESSION['eid'].")");
+		}
+		$temp2=$_SESSION['qarray'][$_SESSION['counter']];
+		$_SESSION['prevQuesID']=$temp2;
+	    $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	    $GetQTitleR  = mysql_fetch_array($getQu);
+	    $TheQuestion = $GetQTitleR["ques"];
+	}
+	if (!(isset($_REQUEST['firstBtn'])||isset($_REQUEST['nextBtn'])||isset($_REQUEST['prvBtn'])||isset($_REQUEST['goTo'])||isset($_REQUEST['flag'])
+	||isset($_REQUEST['prevFlag'])||isset($_REQUEST['nextFlag']))){
+		$temp2=$_SESSION['qarray'][0];
+		$_SESSION['prevQuesID']=$temp2;
+	    $getQu=mysql_query("SELECT * FROM questions Where id=$temp2 ");
+	    $GetQTitleR  = mysql_fetch_array($getQu);
+	    $TheQuestion = $GetQTitleR["ques"];
+		//$_SESSION['counter']++;
+		$quesnumber=1; 
+	}
+	   ?>
        
 <!DOCTYPE html>
   <html>
@@ -152,7 +270,9 @@
 
 
 	 $LoadOp = mysql_query("SELECT * FROM  `mc_so` 
-							WHERE  `qid` =  '$QustaionID' AND (`flag` = '1' OR `flag` ='3') ORDER BY `qid` ASC ");
+							WHERE  `qid` =  '$temp2' AND (`flag` = '1' OR `flag` ='3') ORDER BY  RAND( ) LIMIT 6 ");
+							// I HAVE NO IDEA WHAT DOES FLAG DO -- ZAHRAN
+							// added order by rand() to randomize the choices every time -- ZAHRAN
 					   
   /// next Questions
 	  $next   = mysql_query("SELECT * FROM `container` WHERE `qid` > '$QustaionID' and `eid` = '$examID9' ORDER BY `qid` ASC LIMIT 1");
@@ -169,23 +289,31 @@
 
  <div style="padding-right:20px;">
  
-   <a style="margin:5px;" class="bluishBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>"><span style="color:#FFFFFF;">First Question</span></a>
+  
+   	<input type="submit" class="bluishBtn button_small fl_left" style="margin:5px;color:#FFFFFF;" value="First Question" name="firstBtn"/>
+   <input type="submit" class="yellowBtn button_small fl_left" style="margin:5px;color:#FFFFFF;" value="Next Question" name="nextBtn"/>
+   <input type="submit" class="yellowBtn button_small fl_left" style="margin:5px;color:#FFFFFF;" value="Previous Question" name="prvBtn"/>
+   <input type="text" class="yellowBtn button_small fl_left" style="margin:5px;color:#FFFFFF;" name="QuesNum" />
+	<input type="submit" class="yellowBtn button_small fl_left" style="margin:5px;color:#FFFFFF;" value="Go" name="goTo"/>
+	<input type="submit" class="yellowBtn button_small fl_left" style="margin:5px;color:#FFFFFF;" value="Previous Flagged Question" name="prevFlag"/>
+   <input type="submit" class="yellowBtn button_small fl_left" style="margin:5px;color:#FFFFFF;" value="Flag This Question" name="flag"/>
+   <input type="submit" class="yellowBtn button_small fl_left" style="margin:5px;color:#FFFFFF;" value="Next Flagged Question" name="nextFlag"/>
    
-   <a style="margin:5px;" class="yellowBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>"><span style="color:#FFFFFF;">Next Question</span></a>
+   <!-- // added flag to the url to identify which button have been pressed 
+   // 0 for first
+   // 1 for next
+   // 2 for previous
+   // ZAHARAN -->
    
-   <a style="margin:5px;" class="yellowBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>"><span style="color:#FFFFFF;">Previous Question </span></a>
    
    
-   
-<a style="margin:5px;" class="yellowBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>"><span style="color:#FFFFFF;">Flag This Questions</span></a>
-
 <?php 	  
   if(empty($nextR["qid"])){ ?>
-	  <input name="Update" type="submit" value="Answer This Questions" class="button_small greenishBtn fl_right" style="margin-right:20px;"><?php  }else{ ?>
+	  <input name="Update" type="submit" value="Answer This Questions" class="button_small greenishBtn fl_right" style="margin-right:20px;"
         <div style="padding-right:20px; float:right;">
            <a class="greenishBtn button_small fl_left" href="view-exam.php?q=<?php echo $nextR["qid"];?>&es=<?php echo $examID9; ?>">
            <span style="color:#FFFFFF;">Next Questions</span></a>
-        </div>
+        </div>>
         
  <?php } ?>
 
@@ -198,7 +326,9 @@
  <div class="one_wrap">
     	<div class="widget">
         	<div class="widget_title"><span class="iconsweet">f</span>
-        	<h5><?php echo $TITLE; ?> - ECCP</h5>
+        	<h5><?php echo $TITLE; ?> - ECCP - Question <?php echo $quesnumber ?></h5>
+        	<!--// ADDED BY ZAHRAN
+        	// TRACK QUESTION NUMBER --> 
         	</div>
             <div class="widget_body">
             	<!--Activity Table-->
@@ -206,7 +336,7 @@
             	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
                     <tr align="left">
                       <th colspan="2" align="left">
-					   <?php echo html_entity_decode($TheQustaion);  // Show The Qusetions ?>
+					   <?php echo html_entity_decode($TheQuestion);  // Show The Qusetion ?>
                       </th>
                       </tr>
    <?php // load the options
